@@ -1,0 +1,23 @@
+.content {
+    padding-top : 1.3%;
+    padding-left : 15%;
+    padding-right : 15%;
+}
+
+.item-section {
+    float : left;
+    width : calc(100% - 210px);
+    margin-left : 25px;
+}
+
+.filter-sidebar {
+    float : left;
+    width : 185px;
+}
+
+.search-bar {
+    float : left;
+    width : calc(100% - 210px);
+    margin-left : 25px;
+    text-align : center;
+}

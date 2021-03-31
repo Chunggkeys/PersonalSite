@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curDir=$PWD
+
+code worksite.code-workspace
+
+gnome-terminal --tab -x bash -c "cd ${curDir}/backend; ./manage.py runserver; bash" &
+gnome-terminal --tab -x bash -c "cd ${curDir}/frontend; npm start; bash" &
+
+exit &

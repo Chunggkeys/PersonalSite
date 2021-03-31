@@ -1,0 +1,10 @@
+.pages {
+    text-align : center;
+    padding-top : 30px;
+}
+
+/* @media screen and (max-width: 640px) {
+    .parent {
+        flex-direction: row;
+    }
+} */

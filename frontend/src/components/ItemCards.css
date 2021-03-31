@@ -1,0 +1,9 @@
+.clickable-card {
+    width : 33%;
+    cursor : pointer;
+    overflow : hidden;
+    transform-origin : center top;
+    transform-style : preserve-3d;
+    transform : translateZ( 0 );
+    transition : .3s;
+}
