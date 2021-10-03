@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
+import  BuildServiceConfirmationModal  from './components/BuildServiceConfirmatioModal'
 import { NavLink } from 'react-router-dom'
 
 import {
@@ -60,15 +61,17 @@ class ServicesPage extends React.Component {
         // GET request to get id
         var dataHash;
 
-        axios
-        .get("http://localhost:8000/api/customer_data/")
-        .then(res => (this.setState({ id : res.data.length + 1 }, () => {
-            console.log("id: ", this.state.id); 
-            dataHash = this.state; delete dataHash['showConfirmation']
-            delete dataHash['inventoryData']
-            this.putDataToServer(dataHash)
-        })))
-        .catch(err => console.log(err)) // Perhaps bring to another page
+        // TODO: Implement backend 
+        // axios
+        // .get("http://localhost:8000/api/customer_data/")
+        // .then(res => (this.setState({ id : res.data.length + 1 }, () => {
+        //     console.log("id: ", this.state.id); 
+        //     dataHash = this.state; delete dataHash['showConfirmation']
+        //     delete dataHash['inventoryData']
+        //     this.putDataToServer(dataHash)
+        // })))
+        // .catch(err => console.log(err)) // Perhaps bring to another page
+
     }
 
     putDataToServer = (dataHash) => {
@@ -235,32 +238,7 @@ class ServicesPage extends React.Component {
     }
 }
 
-function BuildServiceConfirmationModal(props) {
-        
 
-    const handleClose = () => props.closeModalCallBackFn();
-    const handleSubmit = () => props.submitCallBackFn()
-
-
-    return(
-        <div>
-            <Modal show={props.state.showConfirmation} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Confirmation</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <div style={{textAlign : 'left'}}>Thanks for submitting! Chunggkeys will be in touch with you shortly regarding your build!</div>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={handleClose}>Close</Button>
-            </Modal.Footer>
-            </Modal>
-
-            <Button onClick={handleSubmit}>Submit</Button>
-        </div>
-        )
-    
-}
 
 export default ServicesPage
 

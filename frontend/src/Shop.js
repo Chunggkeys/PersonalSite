@@ -115,7 +115,7 @@ class ShopPage extends React.Component {
                         <Form.Check 
                         type="checkbox" 
                         label="Stabilizers" 
-                        checked={this.state.case}
+                        checked={this.state.stabilizers}
                         onChange={(e) => this.setState({ stabilizers : e.target.checked })}
                         />
                         <Form.Check 

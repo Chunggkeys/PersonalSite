@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
+import store from './redux/store'
 // function counterReducer(state = { value: 0}, action) {
 //   switch(action.type) {
 //     case 'counter/incremented'
@@ -16,9 +16,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider> */}
+    <Provider store={store}>
     <App />
-    {/* </Provider>  */}
+    </Provider> 
   </React.StrictMode>,
   document.getElementById('root')
 );

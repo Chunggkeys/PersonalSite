@@ -9,6 +9,7 @@ import ShopPage from './Shop'
 import AboutPage from './About'
 import FaqPage from './Faq'
 import ContactPage from './Contact'
+import ServicesGetStartedPage from './servicePages/serviceGetStartedPage'
 import { LoginPage, ForgotPassword, NewAccount } from './Login'
 import { ItemPage } from './components/ItemCards'
 
@@ -64,7 +65,11 @@ class App extends React.Component {
                 <div className="pages">
                 <Switch>
                 <Route exact path="/"></Route>  
-                <Route path="/BuildService"><ServicesPage /></Route>
+                <Route exact path="/BuildService"><ServicesPage /></Route>
+                <Route path="/BuildService/Get_started"><ServicesGetStartedPage /></Route>
+                <Route path="/BuildService/Personal_info"></Route>
+                <Route path="/BuildService/Switches"></Route>
+                <Route path="/BuildService/Case"></Route>
                 <Route path="/Shop"><ShopPage data={inventory}/></Route>
                 <Route path="/About"><AboutPage /></Route>
                 <Route path="/FAQ"><FaqPage /></Route>
